@@ -1,17 +1,21 @@
 @extends('layout.main-layout')
 
 @section('content')
-    <h1>
-        DC Comics
-    </h1>
+    <main class=" text-center my-5">
+        <h1 class="py-2">
+            DC Comics
+        </h1>
 
-    <ul>
-        <ul class="list-unstyled">
-            @foreach ($comics as $c)
-                <li>
-                    {{ $c->title }}
-                </li>
-            @endforeach
+        <ul>
+            <ul class="list-unstyled">
+                @foreach ($comics as $c)
+                    <li>
+                        <a href="{{ route('comics.show', $c->id) }}">
+                            {{ $c->title }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
         </ul>
-    </ul>
+    </main>
 @endsection
