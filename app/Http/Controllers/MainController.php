@@ -21,4 +21,28 @@ class MainController extends Controller
 
         return view('comics.show', compact('comics'));
     }
+
+    public function create()
+    {
+        return view('comics.create');
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+
+        $comics = Comic::create([
+            "title" => $data["title"],
+            "description" => $data["description"],
+            "thumb" => $data["thumb"],
+            "price" => $data["price"],
+            "series" => $data["series"],
+            "sale_date" => $data["sale_date"],
+            "type" => $data["type"],
+            "artists" => $data["artists"],
+            "writers" => $data["writers"],
+        ]);
+
+        return redirect()->route("comics.show", $comics->id);
+    }
 }
