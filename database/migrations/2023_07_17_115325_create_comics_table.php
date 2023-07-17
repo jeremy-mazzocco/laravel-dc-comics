@@ -26,10 +26,6 @@ return new class extends Migration
             $table->string("artists");
             $table->string("writers");
 
-
-
-
-
             $table->timestamps();
         });
     }
