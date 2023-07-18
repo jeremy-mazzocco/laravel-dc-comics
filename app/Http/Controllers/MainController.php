@@ -15,6 +15,7 @@ class MainController extends Controller
         return view('comics.index', compact('comics'));
     }
 
+
     public function show($id)
     {
         $comics = Comic::findOrFail($id);
@@ -22,11 +23,11 @@ class MainController extends Controller
         return view('comics.show', compact('comics'));
     }
 
+
     public function create()
     {
         return view('comics.create');
     }
-
     public function store(Request $request)
     {
         $data = $request->all();
@@ -46,6 +47,7 @@ class MainController extends Controller
         return redirect()->route("comics.show", $comics->id);
     }
 
+
     public function edit($id)
     {
         $comics = Comic::findOrFail($id);
@@ -59,6 +61,7 @@ class MainController extends Controller
         $comics->update($data);
         return redirect()->route('comics.show', $comics->id);
     }
+
 
     public function destroy($id)
     {
