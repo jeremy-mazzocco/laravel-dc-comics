@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout\main-layout')
 
 @section('content')
     <main class=" text-center my-5">
