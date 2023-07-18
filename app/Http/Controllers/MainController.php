@@ -50,7 +50,7 @@ class MainController extends Controller
     {
         $comics = Comic::findOrFail($id);
 
-        return view('edit', compact('comics'));
+        return view('comics.edit', compact('comics'));
     }
     public function update(Request $request, $id)
     {

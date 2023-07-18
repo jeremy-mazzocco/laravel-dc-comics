@@ -31,7 +31,7 @@
                 Type: {{ $comics->type }}
             </div>
         </div>
-        <a href="{{ route('comics.edit'), $comics->id }}">
+        <a href="{{ route('comics.edit', $comics->id) }}">
             EDIT
         </a>
     </div>

@@ -5,7 +5,7 @@
         <h1>
             EDIT COMIC
         </h1>
-        <form action="{{ route('update', $comics->id) }}" method="POST">
+        <form action="{{ route('comics.update', $comics->id) }}" method="POST">
 
             @csrf
             @method('PUT')
@@ -16,8 +16,8 @@
             </div>
 
             <div>
-                <label for="title">Imagine</label>
-                <input type="text" name="title" id="title" value="{{ $comics->title }}">
+                <label for="thumb">Imagine</label>
+                <input type="text" name="thumb" id="thumb" value="{{ $comics->thumb }}">
             </div>
 
             <div>

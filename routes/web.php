@@ -15,5 +15,4 @@ Route::get('/comics/create', [MainController::class, 'create'])->name('comics.cr
 Route::post('/comics', [MainController::class, 'store'])->name('comics.store');
 
 Route::get('/comics/edit/{id}', [MainController::class, 'edit'])->name('comics.edit');
-Route::put('/comics/update/{id}', [MainController::class, "comics.update"])
-    ->name('update');
+Route::put('/comics/update/{id}', [MainController::class, "update"])->name('comics.update');
