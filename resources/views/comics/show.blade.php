@@ -34,5 +34,10 @@
         <a href="{{ route('comics.edit', $comics->id) }}">
             EDIT
         </a>
+        <form action="{{ route('comics.destroy', $comics->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <input class="mx-3" type="submit" value="DELETE">
+        </form>
     </div>
 @endsection
