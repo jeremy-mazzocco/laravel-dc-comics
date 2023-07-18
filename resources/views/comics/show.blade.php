@@ -5,21 +5,35 @@
         <h1>
             {{ $comics->title }}
         </h1>
-        <img src="{{ $comics->thumb }}" alt="">
+        <img src="{{ $comics->thumb }}">
         <div class="row d-flex">
             <div class="col-4">
-                {{ $comics->series }}
+                Series: {{ $comics->series }}
             </div>
             <div class="col-4">
-                {{ $comics->sale_date }}
+                Sale Date: {{ $comics->sale_date }}
             </div>
             <div class="col-4">
-                {{ $comics->price }}
+                Price: {{ $comics->price }}
             </div>
         </div>
         <div>
-            {{ $comics->description }}
+            Description: {{ $comics->description }}
         </div>
+        <div class="row">
+            <div class="col-4">
+                Artists: {{ $comics->artists }}
+            </div>
+            <div class="col-4">
+                Writers: {{ $comics->writers }}
+            </div>
+            <div class="col-4">
+                Type: {{ $comics->type }}
+            </div>
+        </div>
+        <a href="{{ route('comics.edit'), $comics->id }}">
+            EDIT
+        </a>
 
     </div>
 @endsection
