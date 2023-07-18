@@ -34,6 +34,5 @@
         <a href="{{ route('comics.edit'), $comics->id }}">
             EDIT
         </a>
-
     </div>
 @endsection
