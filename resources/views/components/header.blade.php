@@ -1,5 +1,7 @@
 <header class="text-center">
-    <h1>
-        Header
-    </h1>
+    <a href="{{ route('comics.index') }}">
+        <h1>
+            Home
+        </h1>
+    </a>
 </header>
