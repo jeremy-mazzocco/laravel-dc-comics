@@ -35,18 +35,18 @@ class MainController extends Controller
         );
 
         $comics = Comic::create(
-            $data
-            // [
-            // "title" => $data["title"],
-            // "description" => $data["description"],
-            // "thumb" => $data["thumb"],
-            // "price" => $data["price"],
-            // "series" => $data["series"],
-            // "sale_date" => $data["sale_date"],
-            // "type" => $data["type"],
-            // "artists" => $data["artists"],
-            // "writers" => $data["writers"],
-            // ]
+
+            [
+                "title" => $data["title"],
+                "description" => $data["description"],
+                "thumb" => $data["thumb"],
+                "price" => $data["price"],
+                "series" => $data["series"],
+                "sale_date" => $data["sale_date"],
+                "type" => $data["type"],
+                "artists" => $data["artists"],
+                "writers" => $data["writers"],
+            ]
         );
 
         return redirect()->route("comics.show", $comics->id);
