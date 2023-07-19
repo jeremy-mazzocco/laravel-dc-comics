@@ -18,6 +18,6 @@
             </ul>
         </ul>
 
-        <a href="{{ route('comics.create') }}">ADD Comics</a>
+        <a href="{{ route('comics.create') }}">ADD COMICS</a>
     </main>
 @endsection
