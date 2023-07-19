@@ -34,20 +34,7 @@ class MainController extends Controller
             $this->dataValidation()
         );
 
-        $comics = Comic::create(
-
-            [
-                "title" => $data["title"],
-                "description" => $data["description"],
-                "thumb" => $data["thumb"],
-                "price" => $data["price"],
-                "series" => $data["series"],
-                "sale_date" => $data["sale_date"],
-                "type" => $data["type"],
-                "artists" => $data["artists"],
-                "writers" => $data["writers"],
-            ]
-        );
+        $comics = Comic::create($data);
 
         return redirect()->route("comics.show", $comics->id);
     }
@@ -86,7 +73,7 @@ class MainController extends Controller
             "thumb" => 'required|min:3|max:255',
             "price" => 'required|integer|numeric|min:3|max:5000',
             "series" => 'required|min:3|max:255',
-            "sale_date" => 'required|min:3|max:64',
+            "sale_date" => 'required|date|min:3|max:64',
             "type" => 'required|min:3|max:64',
             "artists" => 'required|min:3|max:64',
             "writers" => 'required|min:3|max:64',
