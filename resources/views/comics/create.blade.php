@@ -48,7 +48,7 @@
                 <label for="sale_date">Sale_date</label>
             </div>
             <div>
-                <input type="text" name="sale_date">
+                <input type="date" name="sale_date">
             </div>
 
             <div>

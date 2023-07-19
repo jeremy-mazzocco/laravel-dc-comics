@@ -81,13 +81,13 @@ class MainController extends Controller
     private function dataValidation()
     {
         return [
-            "title" => 'required|min:3|max:34',
-            "description" => 'required|min:3|max:256',
-            "thumb" => 'required|min:3|max:256',
-            "price" => 'required|integer|numeric|min:1|max:10000',
-            "series" => 'required|min:3|max:256',
-            "sale_date" => 'required|min:3|max:32',
-            "type" => 'required|min:3|max:32',
+            "title" => 'required|min:3|max:64',
+            "description" => 'required|min:3|max:255',
+            "thumb" => 'required|min:3|max:255',
+            "price" => 'required|integer|numeric|min:3|max:5000',
+            "series" => 'required|min:3|max:255',
+            "sale_date" => 'required|min:3|max:64',
+            "type" => 'required|min:3|max:64',
             "artists" => 'required|min:3|max:64',
             "writers" => 'required|min:3|max:64',
         ];
