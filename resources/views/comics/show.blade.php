@@ -5,7 +5,7 @@
         <h1>
             {{ $comics->title }}
         </h1>
-        <img src="{{ $comics->thumb }}">
+        <img src="{{ $comics->thumb }}" class="w-50 h-50">
         <div class="row d-flex">
             <div class="col-4">
                 Series: {{ $comics->series }}

@@ -32,17 +32,20 @@ class MainController extends Controller
     {
         $data = $request->all();
 
-        $comics = Comic::create([
-            "title" => $data["title"],
-            "description" => $data["description"],
-            "thumb" => $data["thumb"],
-            "price" => $data["price"],
-            "series" => $data["series"],
-            "sale_date" => $data["sale_date"],
-            "type" => $data["type"],
-            "artists" => $data["artists"],
-            "writers" => $data["writers"],
-        ]);
+        $comics = Comic::create(
+            $data
+            // [
+            // "title" => $data["title"],
+            // "description" => $data["description"],
+            // "thumb" => $data["thumb"],
+            // "price" => $data["price"],
+            // "series" => $data["series"],
+            // "sale_date" => $data["sale_date"],
+            // "type" => $data["type"],
+            // "artists" => $data["artists"],
+            // "writers" => $data["writers"],
+            // ]
+        );
 
         return redirect()->route("comics.show", $comics->id);
     }
